@@ -119,6 +119,32 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &316404261 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 214555e8c426ce04da71dd8b83a950e4, type: 3}
+  m_PrefabInstance: {fileID: 1484885158}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &316404263
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 316404261}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 6, y: 0.2, z: 6}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &330585543
 GameObject:
   m_ObjectHideFlags: 0
@@ -133,7 +159,7 @@ GameObject:
   - component: {fileID: 330585547}
   m_Layer: 0
   m_Name: Main Camera
-  m_TagString: MainCamera
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -515,15 +541,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 214555e8c426ce04da71dd8b83a950e4, type: 3}
       propertyPath: m_LocalScale.x
-      value: 10
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 214555e8c426ce04da71dd8b83a950e4, type: 3}
       propertyPath: m_LocalScale.y
-      value: 10
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 214555e8c426ce04da71dd8b83a950e4, type: 3}
       propertyPath: m_LocalScale.z
-      value: 10
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 214555e8c426ce04da71dd8b83a950e4, type: 3}
       propertyPath: m_LocalPosition.x
@@ -657,6 +683,10 @@ PrefabInstance:
       propertyPath: far clip plane
       value: 10000
       objectReference: {fileID: 0}
+    - target: {fileID: 65702495048144492, guid: 214555e8c426ce04da71dd8b83a950e4, type: 3}
+      propertyPath: m_TagString
+      value: MainCamera
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 214555e8c426ce04da71dd8b83a950e4, type: 3}
       propertyPath: m_Name
       value: Rubik Cube By Kikapp
@@ -664,7 +694,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 214555e8c426ce04da71dd8b83a950e4, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 316404263}
   m_SourcePrefab: {fileID: 100100000, guid: 214555e8c426ce04da71dd8b83a950e4, type: 3}
 --- !u!1001 &1744978951
 PrefabInstance:
@@ -757,11 +790,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: cbf5eb5637be9e345b5cd9baf3db9abe, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: cbf5eb5637be9e345b5cd9baf3db9abe, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: cbf5eb5637be9e345b5cd9baf3db9abe, type: 3}
       propertyPath: m_LocalRotation.x
@@ -769,11 +802,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: cbf5eb5637be9e345b5cd9baf3db9abe, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0
+      value: 0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: cbf5eb5637be9e345b5cd9baf3db9abe, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: cbf5eb5637be9e345b5cd9baf3db9abe, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -781,7 +814,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: cbf5eb5637be9e345b5cd9baf3db9abe, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
+      value: 90
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: cbf5eb5637be9e345b5cd9baf3db9abe, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
@@ -802,8 +835,28 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: cbf5eb5637be9e345b5cd9baf3db9abe, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2056629565}
   m_SourcePrefab: {fileID: 100100000, guid: cbf5eb5637be9e345b5cd9baf3db9abe, type: 3}
+--- !u!1 &2056629563 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: cbf5eb5637be9e345b5cd9baf3db9abe, type: 3}
+  m_PrefabInstance: {fileID: 2023555243}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2056629565
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2056629563}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 40587ce921a0ae6479a40be1f320c759, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::BasketController
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
