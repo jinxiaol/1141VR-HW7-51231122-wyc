@@ -27,6 +27,8 @@ public class GameDirector : MonoBehaviour
     void Update()
     {
         this.time -= Time.deltaTime;
+        this.timerText.GetComponent<TextMeshProUGUI>().text = this.time.ToString("F1");
+        this.pointText.GetComponent<TextMeshProUGUI>().text = this.point.ToString() + " point";
         if (this.time < 0)
         {
             this.time = 0;
@@ -49,5 +51,4 @@ public class GameDirector : MonoBehaviour
             this.generator.GetComponent<ItemGenerator>().SetParameter(1.0f, -0.03f, 2);
         }
     }
-        
 }
